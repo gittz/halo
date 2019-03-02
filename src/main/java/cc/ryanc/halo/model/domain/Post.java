@@ -5,7 +5,6 @@ import cn.hutool.core.date.DateUtil;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -142,6 +141,11 @@ public class Post implements Serializable {
      * 文章访问密码
      */
     private String postPassword;
+
+    /**
+     * 是否置顶
+     */
+    private Integer isTop;
 
     /**
      * 指定渲染模板
