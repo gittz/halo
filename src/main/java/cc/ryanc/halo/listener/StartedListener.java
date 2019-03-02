@@ -6,7 +6,6 @@ import cc.ryanc.halo.service.OptionsService;
 import cc.ryanc.halo.utils.HaloUtils;
 import cc.ryanc.halo.web.controller.core.BaseController;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.cron.CronUtil;
 import freemarker.template.TemplateModelException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,9 +47,6 @@ public class StartedListener implements ApplicationListener<ApplicationStartedEv
         this.loadOptions();
         this.loadThemes();
         this.loadOwo();
-        //启动定时任务
-        CronUtil.start();
-        log.info("The scheduled task starts successfully!");
     }
 
     /**
